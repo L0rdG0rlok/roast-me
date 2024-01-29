@@ -1,11 +1,15 @@
 {
   "expo": {
     "name": "roast-me",
+    "scheme": "roast-me-scheme",
     "slug": "roast-me",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "experiments": {
+      "typedRoutes": true
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -17,6 +21,7 @@
     "ios": {
       "supportsTablet": true
     },
+    
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -24,7 +29,20 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Burn.otf",
+            "./assets/fonts/Spliffs-YE3o.ttf"
+          ]
+        }
+      ]
+    ]
   }
 }
