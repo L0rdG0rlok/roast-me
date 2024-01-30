@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from "react-native";
-import React, { Children } from "react";
-import { Link, Href, AllRoutes, useRouter, useNavigation, router } from "expo-router";
+import React from "react";
+import { Link, Href, AllRoutes, usePathname, router} from "expo-router";
 
 interface FormButtonProps {
     children: React.ReactNode
@@ -8,10 +8,19 @@ interface FormButtonProps {
 }
 
 const FormButton = ({ children, path }: FormButtonProps) => {
+
+  const currentScreen = usePathname()
+
+  const onPressHandler = () =>{
+    if (currentScreen === "/") {
+      router.replace(path)
+    } else { router.push((path)) }
+  }
+
   return (
-    <Link href={path} asChild onPress={() => {router.replace("/tabs/Profile")}}>
-      <Pressable className="border p-2 rounded-lg border-[#ffb788] flex-1 items-center justify-center">
-        <Text className="text-[#ffb788] ">{children}</Text>
+    <Link href={path} asChild onPress={onPressHandler}>
+      <Pressable className="border p-2 rounded-lg border-primary-default flex-1 items-center justify-center">
+        <Text className="text-primary-default ">{children}</Text>
       </Pressable>
     </Link>
   );

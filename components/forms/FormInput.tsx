@@ -1,6 +1,7 @@
-import { View, TextInput, Text, RootTagContext } from 'react-native'
+import { View, TextInput } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import colors from '../../app/constants/colors';
 
 
 interface FormProps {
@@ -14,18 +15,18 @@ interface FormProps {
 
 const FormInput = ({ IoniconName, color = "#ffb788", placeHolder, textContentType, keyboardType = 'default', secureTextEntry = false }: FormProps) => {
   return (
-    <View className={`flex-row items-center border-b pb-1 border-[${color}] m-2`}>
+    <View className={`flex-row items-center border-b pb-1 border-primary-default m-2`}>
           <Ionicons
             style={{ marginLeft: 4 }}
             name={IoniconName}
             size={16}
-            color="#ffb788"
+            color={colors.primary.default}
           />
           <TextInput
-            className={`flex-1 mx-2 text-[${color}]`}
+            className={`flex-1 mx-2 text-prborder-primary-default`}
             selectionColor={color}
             placeholder={placeHolder}
-            placeholderTextColor="#76A9D0"
+            placeholderTextColor={colors.secondary.light}
             textContentType={textContentType}
             keyboardType={keyboardType}
             secureTextEntry={secureTextEntry}

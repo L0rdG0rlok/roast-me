@@ -1,14 +1,25 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router'
+import { Link } from "expo-router";
+import {
+  View,
+  Text,
+  Image,
+  KeyboardAvoidingView,
+  Keyboard,
+  TouchableWithoutFeedback,
+} from "react-native";
 
-const TabsPage = () => {
+const ProfilePage = () => {
   return (
-    <View className='flex-1 items-center justify-center'>
-      <Text className='text-white'>TabsPage</Text>
-      <Link className='text-white' href={"/"}>INDEX</Link>
-    </View>
-  )
-}
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <KeyboardAvoidingView
+        behavior="padding"
+        className="flex-1 items-center justify-center bg-primary-default"
+      >
+        <Text>WOOO</Text>
+        <Link href={"/"}>Back to the login screen</Link>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
+  );
+};
 
-export default TabsPage
+export default ProfilePage;
