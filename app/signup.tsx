@@ -11,7 +11,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 import FormInput from "../components/forms/FormInput";
-import Ionicons from "@expo/vector-icons/Ionicons";
+
 import FormButton from "../components/forms/FormButton";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 
@@ -22,7 +22,7 @@ const SignUpPage = () => {
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <KeyboardAvoidingView
         behavior="padding"
-        className="flex-1 items-center justify-center bg-[#346B96]"
+        className="flex-1 items-center justify-center bg-bg-color-default"
       >
         <View>
           <Text

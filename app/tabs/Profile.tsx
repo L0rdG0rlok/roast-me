@@ -7,16 +7,22 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from "react-native";
+import UserPost from "../../components/feed/UserPost";
+
 
 const ProfilePage = () => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <KeyboardAvoidingView
         behavior="padding"
-        className="flex-1 items-center justify-center bg-primary-default"
+        className="flex-1 p-2 bg-primary-light"
       >
-        <Text>WOOO</Text>
-        <Link href={"/"}>Back to the login screen</Link>
+        <UserPost></UserPost>
+        <UserPost></UserPost>
+        <UserPost></UserPost>
+        <Link className="items-end" href={"/"}>
+          Back to the login screen
+        </Link>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );
