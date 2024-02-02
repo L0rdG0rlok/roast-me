@@ -17,9 +17,7 @@ const ProfileFeedPage = () => {
         behavior="padding"
         className="flex-1 p-2 bg-primary-light"
       >
-        <UserPost></UserPost>
-        <UserPost></UserPost>
-        <UserPost></UserPost>
+     <Text>USERS</Text>
         <Link className="items-end" href={"/"}>
           Back to the login screen
         </Link>

@@ -43,7 +43,7 @@ const HomePage = () => {
             secureTextEntry={true}
           ></FormInput>
           <View className="flex-row justify-around space-x-4 my-4">
-            <FormButton path={"/tabs/Profile"}>Login</FormButton>
+            <FormButton path={"/tabs/ProfileFeed"}>Login</FormButton>
           </View>
           <View className="flex-row items-center mt-4">
             <Link href={"/forgotpassword"} className="flex-1 text-center text-primary-default">
